@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/37ee1699ac.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logofr.png">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header class="container">
+        <nav class="header">
+            <figure class="header__figure">
+                <img class="header__logo" src="images/logofr.png" alt="">
+            </figure>
+            <h1 class="header__title">Encriptador y desencriptador de mensajes</h1>
+        </nav>
+    </header>
+
+    <main class="encriptador container">
+        <section class="encriptador__area">
+            <textarea type="text" class="encriptador__input" placeholder="Ingrese su mensaje aqui" id="encriptador__mensaje"></textarea>
+            <div class="buttons">
+                <button class="button__encrypt" onclick="encriptacion()">
+                    Encriptar
+                </button>
+                <button class="button__encrypt" onclick="desencriptacion()">
+                    Desencriptar
+                </button>
+            </div>
+            <div class="encriptador__error">
+            </div>
+        </section>
+        <section class="encriptador__result">
+            <figure class="encriptador__figure">
+                <img src="images/candadoabierto.png" alt="" class="encriptador__img encriptador__img_open">
+            </figure>
+            <h2 class="encriptador__title">
+                Ningun mensaje fue encontrado
+            </h2>
+            <textarea name="" id="" cols="30" rows="10" class="encriptador__textarea" id="encriptador__textarea--id"></textarea>
+            <button class="buttons encriptador__button--copy " onclick="copiarMensaje()">Copiar mensaje</button>
+            <p class="encriptador__paragraph" ><b>Solo se admiten letras minusculas y sin tildes</b></p>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p class="footer__paragrpah">&copy Realizado por Facundo Rios</p>
+        <section class="media">
+            <figure class="footer__media">
+                <a href="https://github.com/alenchufacundo" target="_blank" class="footer__link"><img src="images/github.svg" alt="" class="footer__github"></a>
+            </figure>
+            <figure class="footer__media">
+                <a href="https://www.instagram.com/alenchufacundorios/" target="_blank" class="footer__link"><img src="images/ig.svg" alt="" class="footer__ig"></a>
+            </figure>
+            <figure class="footer__media">
+                <a href="https://www.linkedin.com/in/alenchufacundorios/" target="_blank" class="footer__link"><img src="images/linkedin.svg" alt="" class="footer__linkedin"></a>
+            </figure>
+        </section>
+    </footer>
+    <script src="js/encriptacion.js"></script>
+    <script src="js/copypaste.js"></script>
+    
+</body>
+</html>

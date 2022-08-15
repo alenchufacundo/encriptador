@@ -1,0 +1,247 @@
+:root{
+    --very-dark-blue: hsl(243, 87%, 12%);
+    --desaturated-blue: hsl(238, 22%, 44%);
+    --desaturated-blue2: hsl(239, 26%, 53%);
+    --bright-blue: hsl(224, 93%, 58%);
+    --moderate-cyan: hsl(170, 45%, 43%);
+    --light-grayish-blue: hsl(240, 75%, 98%);
+    --light-gray: hsl(0, 0%, 75%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: var(--desaturated-blue2);
+    max-height: 800px;
+}
+
+.container {
+    width: 90%;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 2.125rem auto;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.header__title{
+    text-align: center;
+}
+
+.header__figure{
+    max-width: 250px;
+    min-width: 200px;
+    height: 150px;
+}
+
+
+.header__logo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.encriptador{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.encriptador__error{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.encriptador__area{
+    margin: 1.5rem;
+    display: flex;
+    gap: .75rem;
+    flex-direction: column;
+}
+
+.encriptador__input{
+    height:350px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--very-dark-blue);
+    font-family: inherit;
+    background-color: var(--desaturated-blue);
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.encriptador__input::placeholder{
+    line-height: 125px;
+    color: rgba(241, 214, 56, 0.479);
+}
+
+.encriptador__result{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1.5rem;
+}
+
+.encriptador__textarea{
+    border: 2px solid var(--very-dark-blue);
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: var(--desaturated-blue);
+}
+
+.encriptador__figure{
+    margin: 1rem  auto;
+    display: flex;
+    justify-content: center;
+}
+
+.encriptador__img{
+    width: 70%;
+    height: 80%;
+}
+
+.encriptador__img_closed{
+    display: none;
+}
+
+.encriptador__title{
+    text-align: center;
+}
+
+.encriptador__button--copy{
+    width: 150px;
+    display: none;
+    border-radius: 2rem;
+}
+
+.encriptador__paragraph{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.buttons{
+    margin: .25rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: .5rem;
+}
+
+.button__encrypt{
+    border-radius: 2rem;
+    width: 150px;
+    font-family: inherit;
+    background-color: rgb(201, 185, 94);
+}
+
+.encriptador__button--copy{
+    display: none;
+    padding: .25rem;
+    background-color: rgb(201, 185, 94);
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.footer .container{
+    margin: 2rem auto;
+}
+
+.media{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__github, .footer__ig, .footer__linkedin{
+    width:  1.5rem;
+}
+
+.footer__github:hover, .footer__ig:hover, .footer__linkedin:hover{
+    background-color: rgb(201, 185, 94);
+}
+
+
+@media (min-width: 1024px){
+
+    .encriptador{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .encriptador__area{
+        flex-grow: 1;
+    }
+
+    .encriptador__img{
+        width: 90%;
+    }
+
+    .encriptador__input{
+        height: 400px;
+    }
+
+    .encriptador__input::placeholder{
+        line-height: 350px;
+    }
+
+    .encriptador__result{
+        justify-content: space-around;
+    }
+
+    .encriptador__figure{
+        max-width: 400px;
+        min-width: 300px;   
+    }
+
+    .buttons{
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 768px){
+    .header{
+        flex-direction: row;
+    }
+
+}
+
+
+@media (min-width:425px){
+    .encriptador__input::placeholder{
+        line-height: 325px;
+    }
+}
+
+
+    
